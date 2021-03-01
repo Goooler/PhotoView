@@ -109,10 +109,10 @@ class PhotoView @JvmOverloads constructor(
             attacher?.isZoomable = zoomable
         }
 
-    val displayRect: RectF
+    val displayRect: RectF?
         get() = attacher!!.displayRect
 
-    fun getDisplayMatrix(matrix: Matrix?) {
+    fun getDisplayMatrix(matrix: Matrix) {
         attacher?.getDisplayMatrix(matrix)
     }
 
@@ -120,7 +120,7 @@ class PhotoView @JvmOverloads constructor(
         return attacher!!.setDisplayMatrix(finalRectangle)
     }
 
-    fun getSuppMatrix(matrix: Matrix?) {
+    fun getSuppMatrix(matrix: Matrix) {
         attacher?.getSuppMatrix(matrix)
     }
 
